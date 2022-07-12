@@ -48,7 +48,7 @@ class APITest:
         with self.assertRaises(ModuleNotFoundError):
             util.import_importlib('some module that does not exist')
 
-    def test_name_requires_rparition(self):
+    def test_name_requires_rpartition(self):
         # Raise TypeError if a non-string is passed in for the module name.
         with self.assertRaises(TypeError):
             self.__import__(42)
@@ -106,10 +106,10 @@ class OldAPITests(APITest):
             warnings.simplefilter("ignore", ImportWarning)
             super().test_raises_ModuleNotFoundError()
 
-    def test_name_requires_rparition(self):
+    def test_name_requires_rpartition(self):
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", ImportWarning)
-            super().test_name_requires_rparition()
+            super().test_name_requires_rpartition()
 
     def test_negative_level(self):
         with warnings.catch_warnings():
